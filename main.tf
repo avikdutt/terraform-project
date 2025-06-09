@@ -1,11 +1,13 @@
 resource "aws_s3_bucket" "mybucket" {
   bucket = var.bucketname
-  
+  force_destroy = true
+
   lifecycle {
-    prevent_destroy = true
+  # prevent_destroy = true
     ignore_changes = all
   }
 }
+
 
 resource "aws_s3_bucket_ownership_controls" "mybucket" {
   bucket = aws_s3_bucket.mybucket.id
