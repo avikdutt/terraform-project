@@ -14,7 +14,6 @@ This project automates Terraform deployments using GitLab CI/CD pipelines. It pr
 
 ## 📁 Project Structure
 
-.
 ├── .gitlab-ci.yml # GitLab CI pipeline definition
 ├── main.tf # Terraform configuration (e.g., AWS S3 bucket)
 └── README.md # Project overview and usage
