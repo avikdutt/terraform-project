@@ -73,7 +73,11 @@ apply:
 destroy:
   stage: destroy
   script:
+    - terraform init
     - terraform destroy -auto-approve
   when: manual
+  environment:
+    name: teardown
   only:
-    - schedules
+    - master
+
